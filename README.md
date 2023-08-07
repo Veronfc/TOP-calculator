@@ -1,1 +1,1 @@
-# Final project in Odin foundation course
+# Final project in The Odin Project foundation course
