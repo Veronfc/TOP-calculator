@@ -1,1 +1,1 @@
-# Calculator - Final project in Odin foundation course
+# Final project in Odin foundation course
