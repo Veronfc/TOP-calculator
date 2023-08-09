@@ -18,12 +18,16 @@ body {
 button {
   flex-basis: 20%;
   margin: 5px;
-  padding: 10px 0;
+  padding: 5px 0;
   border: 1px solid black;
   border-radius: 5px;
   background-color: lightgray;
   font-family: 'Courier New', Courier, monospace;
   font-size: 20px;
+}
+
+#delete, #clear {
+  flex-basis: 42%;
 }
 
 button:hover {
@@ -34,7 +38,7 @@ button:hover {
 
 #display {
   height: 30px;
-  width: 374px;
+  width: 410px;
   border: 1px solid black;
   border-radius: 5px;
   background-color: lightgray;

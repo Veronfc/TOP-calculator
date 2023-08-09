@@ -1,6 +1,7 @@
 const display = document.getElementById('display');
 const buttons = document.querySelectorAll('button');
 const clear = document.getElementById('clear');
+const del = document.getElementById('delete');
 const equal = document.getElementById('equal');
 
 let x = '';
@@ -35,6 +36,11 @@ buttons.forEach((button) => {
     })
   }
 })
+
+del.addEventListener('click', () => {
+  text = display.innerText;
+  display.innerText = text.slice(0, text.length - 1);
+});
 
 clear.addEventListener('click', () => {
   display.innerText = '';
