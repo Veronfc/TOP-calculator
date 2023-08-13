@@ -1,5 +1,6 @@
 const display = document.getElementById('display');
-const buttons = document.querySelectorAll('button');
+const nums = document.querySelectorAll('.n');
+const ops = document.querySelectorAll('.o');
 const clear = document.getElementById('clear');
 const del = document.getElementById('delete');
 const equal = document.getElementById('equal');
@@ -8,38 +9,39 @@ let x = '';
 let y = '';
 let op = '';
 
-buttons.forEach((button) => {
+nums.forEach((button) => {
   if (Number.isInteger(Number.parseInt(button.id))) {
     button.addEventListener('click', () => {
       display.innerText += button.id;
     })
   }
-  else {
-    button.addEventListener('click', () => {
-      if (display.innerText != '') {
-        if (button.id == 'add') {
-          op = 'add';
-        }
-        else if (button.id == 'subtract') {
-          op = 'subtract';
-        }
-        else if (button.id == 'multiply') {
-          op = 'multiply';
-        }
-        else if (button.id == 'divide') {
-          op = 'divide';
-        }
+})
 
-        x == display.innerText;
-        display.innerText = '';
+ops.forEach((button) => {
+  button.addEventListener('click', () => {
+    if (display.innerText != '') {
+      if (button.id == 'add') {
+        op = 'add';
       }
-    })
-  }
+      else if (button.id == 'subtract') {
+        op = 'subtract';
+      }
+      else if (button.id == 'multiply') {
+        op = 'multiply';
+      }
+      else if (button.id == 'divide') {
+        op = 'divide';
+      }
+
+      x == display.innerText;
+      display.innerText = '';
+    }
+  })
 })
 
 del.addEventListener('click', () => {
   text = display.innerText;
-  display.innerText = text.slice(0, text.length - 1);
+  display.innerText = text.substring(0, text.length - 1);
 });
 
 clear.addEventListener('click', () => {
